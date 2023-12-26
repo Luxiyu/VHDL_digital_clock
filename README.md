@@ -2,6 +2,7 @@
 ## HAUT大三上EDA技术课程设计
 ### 安装要求
 本项目采用QuartusII9.0版本设计，非9.0版本打开可能会存在兼容性问题。
+本项目选用FPGA器件为CycloneIII_EP3C40Q240C8
 ### 设计任务
 设计一个24进制多功能数字电子钟，要求具备以下功能：
 （1）时钟显示：能够以十进制在7段数码管上显示“时”、“分”、“秒”、“十分之一秒”。
@@ -24,4 +25,26 @@
 #### 总体框图
 ![image](https://github.com/Luxiyu/VHDL_digital_clock/blob/main/IMAGE/设计逻辑框图.png)
 ### 顶层设计仿真
-
+(1)软件编译通过
+![image](https://github.com/Luxiyu/VHDL_digital_clock/blob/main/IMAGE/顶层设计编译通过.png)
+(2)计时功能仿真
+![image](https://github.com/Luxiyu/VHDL_digital_clock/blob/main/IMAGE/二十四进制计时功能仿真.png)
+(3)启动/停止功能仿真
+![image](https://github.com/Luxiyu/VHDL_digital_clock/blob/main/IMAGE/启动功能仿真.png)
+![image](https://github.com/Luxiyu/VHDL_digital_clock/blob/main/IMAGE/停止功能仿真.png)
+(4)一键清零功能仿真
+![image](https://github.com/Luxiyu/VHDL_digital_clock/blob/main/IMAGE/清零功能仿真.png)
+(5)校表功能仿真
+![image](https://github.com/Luxiyu/VHDL_digital_clock/blob/main/IMAGE/校表功能仿真.png)
+(6)整点报时功能仿真
+![image](https://github.com/Luxiyu/VHDL_digital_clock/blob/main/IMAGE/整点报时功能仿真.png)
+(7)闹钟功能仿真
+![image](https://github.com/Luxiyu/VHDL_digital_clock/blob/main/IMAGE/闹钟功能仿真.png)
+### 不足/改进点
+闹钟功能实现时，由于进位信号的突变，导致仿真波形会产生细微的波动，使得闹铃信号被错误产生。这里可以考虑优化代码判断逻辑，由于课设安排时间有限没能优化完全。
+另外在设计计时功能时，还可以考虑增加时钟频率的设置功能。在设计校表功能时，可以考虑增加校表模式的存储功能。在设计整点报时功能时，可以考虑增加对于多个闹铃时间的存储功能。
+###项目参考
+[1] 焦素敏.EDA技术基础（第二版）.北京：清华大学出版社，2022，172～175
+[2] 马宁,刘佳辉,谭月洁.基于VHDL语言的数字电子时钟设计[J].数码世界,2019,(09):128.
+[3] CNBlog 作者 漫舞八月（Mount256）https://www.cnblogs.com/Mount256/p/15628625.html#52-心得体会
+[4] Github项目 DE2-Electric-Timer 作者snwjas https://github.com/snwjas/DE2-Electric-Timer
