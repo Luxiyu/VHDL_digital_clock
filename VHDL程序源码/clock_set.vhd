@@ -1,4 +1,4 @@
--- select module
+-- select module 校表选择模块
 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;

@@ -1,4 +1,5 @@
 -- counter 10 for millisecond
+
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
